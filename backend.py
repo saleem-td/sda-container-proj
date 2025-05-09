@@ -23,10 +23,12 @@ from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 import chromadb
 
-load_dotenv()
+#load_dotenv()
 
-keyVaultName = os.environ.get("key-vault-name")
-KVUri = f"https://{keyVaultName}.vault.azure.net"
+#keyVaultName = os.environ.get("key-vault-name")
+#KVUri = f"https://{keyVaultName}.vault.azure.net"
+
+KVUri = "https://sda-project.vault.azure.net/"
 
 credential = DefaultAzureCredential()
 kv_client = SecretClient(vault_url=KVUri, credential=credential)
