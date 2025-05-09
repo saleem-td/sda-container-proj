@@ -25,7 +25,7 @@ import chromadb
 
 load_dotenv()
 
-keyVaultName = os.environ.get("key-vault-nam")
+keyVaultName = os.environ.get("key-vault-name")
 KVUri = f"https://{keyVaultName}.vault.azure.net"
 
 credential = DefaultAzureCredential()
