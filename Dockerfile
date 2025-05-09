@@ -9,7 +9,7 @@ COPY backend.py /app/
 COPY requirements.txt /app/
 
 # Install dependencies
-RUN sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean
+RUN apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean
 RUN python3 -m pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
